@@ -61,14 +61,20 @@ class GameOfLife:
 
 
 def main():
+    # Создание главного окна приложения
     root = tk.Tk()
+    # Установка заголовка окна
     root.title("Game of Life")
+    # Создание экземпляра игры, передавая главное окно в качестве родительского виджета
     game = GameOfLife(root)
+    # Создание кнопки "Start/Stop" для запуска и остановки симуляции, связанной с методом start_stop экземпляра game
     start_stop_button = tk.Button(root, text="Start/Stop", command=game.start_stop)
+    # Размещение кнопки на главном окне
     start_stop_button.pack()
+    # Отрисовка начального состояния игры
     game.draw_board()
+    # Запуск главного цикла обработки событий Tkinter
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
