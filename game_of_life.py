@@ -76,5 +76,6 @@ def main():
     # Запуск главного цикла обработки событий Tkinter
     root.mainloop()
 
+
 if __name__ == "__main__":
     main()
